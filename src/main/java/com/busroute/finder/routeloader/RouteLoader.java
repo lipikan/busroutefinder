@@ -71,14 +71,14 @@ public class RouteLoader {
             throw new InvalidDataFileException("Route Count Mismatch: Total Routes: " + numberOfRoutes + " Actual Routes Found: " + actualNumberOfRoutes);
         }
 
-        Set<Integer> uniqueStationIds = lines.stream()
+        Set<Integer> distinctStationIds = lines.stream()
                 .filter(line -> !StringUtils.isEmpty(line))
                 .skip(1)
                 .map(line -> WHITE_SPACE_PATTERN.splitAsStream(line).skip(1).map(Integer::valueOf).collect(Collectors.toList()))
                 .flatMap(x -> x.stream())
                 .collect(Collectors.toSet());
 
-        if (uniqueStationIds.size() > MAX_STATION_ALLOWED) {
+        if (distinctStationIds.size() > MAX_STATION_ALLOWED) {
             throw new InvalidDataFileException("Max Station Allowed exceeded its limit.");
         }
 
