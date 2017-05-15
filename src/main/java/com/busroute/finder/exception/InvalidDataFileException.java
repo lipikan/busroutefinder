@@ -1,4 +1,4 @@
-package com.busroute.finder.util;
+package com.busroute.finder.exception;
 
 /**
  * Created by linaik on 2017/05/15.

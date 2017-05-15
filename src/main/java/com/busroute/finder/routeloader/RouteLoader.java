@@ -1,7 +1,7 @@
 package com.busroute.finder.routeloader;
 
-import com.busroute.finder.util.InvalidDataFileException;
-import static com.busroute.finder.util.RouteConstants.*;
+import com.busroute.finder.exception.InvalidDataFileException;
+import static com.busroute.finder.routeloader.RouteConstants.*;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
