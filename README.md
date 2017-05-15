@@ -53,11 +53,13 @@ Bus Routes Data File:
 0 0 1 2 3 4
 1 3 1 6 5
 2 0 6 4
+```
 Query:
-
+```
 http://localhost:8088/api/direct?dep_sid=3&arr_sid=6
+```
 Response:
-
+```
 {
     "dep_sid": 3,
     "arr_sid": 6,
