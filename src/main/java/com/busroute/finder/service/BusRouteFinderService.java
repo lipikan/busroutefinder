@@ -44,7 +44,8 @@ public class BusRouteFinderService {
         }
 
         for(Integer depRouteId :departureRoutes){
-            if(arrivalRoutes.contains(depRouteId) && routes.get(depRouteId).contains(arrivalStationId)){
+            if(arrivalRoutes.contains(depRouteId) && routes.get(depRouteId).contains(arrivalStationId)
+                    && routes.get(depRouteId).contains(departureStationId)){
                 return true;
             }
         }
