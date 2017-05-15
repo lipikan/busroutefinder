@@ -16,6 +16,12 @@ public class BusRouteFinderController {
     @Autowired
     BusRouteFinderService service;
 
+    /**
+     * Finds Direct Route between two stations.
+     * @param departureStationId
+     * @param arrivalStationId
+     * @return
+     */
     @RequestMapping(value = "/direct", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody BusRouteResponse findDirectRoutes(@RequestParam("dep_sid") int departureStationId, @RequestParam("arr_sid") int arrivalStationId){
 
