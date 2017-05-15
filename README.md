@@ -26,7 +26,8 @@ The response has to be a single JSON Object:
     "arr_sid",
     "direct_bus_route"
   ]
-}```
+}
+```
 The direct_bus_route field has to be set to true if there exists a bus route in the input data that connects the stations represented by dep_sid and arr_sid. Otherwise direct_bus_route must be set to false.
 
 Example Data
@@ -48,8 +49,9 @@ Response:
     "dep_sid": 3,
     "arr_sid": 6,
     "direct_bus_route": true
-}```
+}
 
+```
 Note:
 ```
 1) Due to other commitments and lack of time could not add unit test cases.
